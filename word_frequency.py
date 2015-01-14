@@ -1,5 +1,7 @@
 
 def word_frequency(given_string):
+	"""Takes a string, returns a dictionary with the
+	count for each word in the string"""
 	word_dict = {}
 	clean_line = given_string
 	for character in "-!.,#*()\':;?/@:\"":
@@ -20,6 +22,7 @@ with open("sample.txt") as our_file:
 			our_dict[key] = midway_dict[key] + our_dict.get(key, 0)
 
 def gets_count(dictionary_item):
+	"""Returns the second item in a tuple"""
 	return dictionary_item[1]
 
 dict_list = our_dict.items()
@@ -28,3 +31,7 @@ top_twenty = sorted_dict_list[:20]
 
 for word, count in top_twenty:
 	print "{} {}".format(word, count)
+
+def fancy_histogram(given_dict, count=20):
+	"""Prints a normalized histogram to the terminal of the top 20 items in a
+	sorted list of word/count tuples"""
