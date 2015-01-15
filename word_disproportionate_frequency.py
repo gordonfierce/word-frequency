@@ -20,14 +20,14 @@ def relative_count_dict(first_dict, second_dict):
     print ("First file has: {} Second file has: {}".format(first_count, second_count))
     average_dict = {}
     for key in first_dict:
-        print("Initially {} is {}".format(key, first_dict[key]))
+        #print("Initially {} is {}".format(key, first_dict[key]))
         first_dict[key] = float(first_dict[key])/float(first_count)
-        print("New normalized key for {} is {}".format(key, first_dict[key]))
+        #print("New normalized key for {} is {}".format(key, first_dict[key]))
     for key in second_dict:
         second_dict[key] = float(second_dict[key])/float(second_count)
     #print second_dict
     for key in first_dict:
-		average_dict[key] = first_dict[key] + average_dict.get(key, 0)
+        average_dict[key] = first_dict[key] + average_dict.get(key, 0)
     for key in second_dict:
         average_dict[key] = second_dict[key] + average_dict.get(key, 0)
     for key in average_dict:
